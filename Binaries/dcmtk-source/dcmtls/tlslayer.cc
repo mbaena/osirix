@@ -188,7 +188,7 @@ DcmTLSTransportLayer::DcmTLSTransportLayer(int networkRole, const char *randFile
    SSLeay_add_all_algorithms();
    seedPRNG(randFile);
 
-   SSL_METHOD *method = NULL;
+   const SSL_METHOD *method = NULL;
    switch (networkRole)
    {
      case DICOM_APPLICATION_ACCEPTOR: 
